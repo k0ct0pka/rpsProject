@@ -22,7 +22,8 @@ img{
 .js-result{
     font-size: 32px;
 }
-.reset-score{
+.reset-score,
+.auto-play {
     width: 200px;
     height: 70px;
     background-color: white;
