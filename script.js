@@ -82,3 +82,21 @@ let score = JSON.parse(localStorage.getItem('score'))
           console.log(Math.random());
           return computerMove;
         }
+let isAutoPlaying=false;
+        let intervalId;
+        function autoPlay(){
+          
+          
+          if(!isAutoPlaying){
+            document.querySelector('.auto-play').innerHTML='Stop Play';
+            intervalId=setInterval(() =>{
+              const playerMove=pickComputerMove();
+              playGame(playerMove);
+            },1000);
+            isAutoPlaying=true;
+          } else if(isAutoPlaying){
+            document.querySelector('.auto-play').innerHTML='Auto Play';
+            clearInterval(intervalId);
+            isAutoPlaying=false;
+          }
+        }
