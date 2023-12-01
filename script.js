@@ -100,3 +100,17 @@ let isAutoPlaying=false;
             isAutoPlaying=false;
           }
         }
+document.body.addEventListener('keydown',(event)=>{
+          if(event.key=='r'){
+            playGame('rock');
+          } else if(event.key=='s'){
+            playGame('scissors');
+          } else if(event.key=='p'){
+            playGame('paper');
+          }
+        })
+        document.body.addEventListener('keydown',(event)=>{
+          if(event.key=='a'){
+            autoPlay();
+          } 
+        })
